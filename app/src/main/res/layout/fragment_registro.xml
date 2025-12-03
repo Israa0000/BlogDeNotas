@@ -11,7 +11,7 @@
         android:layout_height="match_parent">
 
         <EditText
-            android:id="@+id/editTextText"
+            android:id="@+id/nombreUserRegistro"
             android:layout_width="276dp"
             android:layout_height="50dp"
             android:ems="10"
@@ -39,7 +39,7 @@
             app:layout_constraintVertical_bias="0.359" />
 
         <EditText
-            android:id="@+id/contrseña2Registro"
+            android:id="@+id/contraseña2Registro"
             android:layout_width="276dp"
             android:layout_height="43dp"
             android:ems="10"
@@ -64,10 +64,11 @@
             app:layout_constraintVertical_bias="0.742" />
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/VolverLogin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="TextView"
+            android:text="Volver a Login"
+            android:textColor="@color/purple_500"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
