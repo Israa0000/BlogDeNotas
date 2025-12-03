@@ -3,6 +3,7 @@ package com.example.blogdenotas.View;
 import android.Manifest;
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
@@ -31,25 +32,23 @@ public class LandingActivity extends AppCompatActivity {
 
         permisoVibracion();
 
+        Intent intent = new Intent(this, LoginActivity.class);
+        startActivity(intent);
+
     }
     int pedirPermisoVibracion = 1;
-
     void permisoVibracion(){
-
-        if (ContextCompat.checkSelfPermission(this, Manifest.permission.VIBRATE) != PackageManager.PERMISSION_GRANTED){
-            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.VIBRATE},pedirPermisoVibracion);
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.VIBRATE) != PackageManager.PERMISSION_GRANTED) {
+            //explicación al usuario
+            if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.VIBRATE)) {
+            } else {
+                ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.VIBRATE}, pedirPermisoVibracion);
+            }
         } else {
-            vibrateDevice();
+            Vibrator vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+            vibrator.vibrate(500);
         }
     }
 
-    private void vibrateDevice() {
-        Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                v.vibrate(VibrationEffect.createOneShot(500, VibrationEffect.DEFAULT_AMPLITUDE)); // 500ms
-            } else {
-                v.vibrate(500);
-            }
-    }
 
 }
