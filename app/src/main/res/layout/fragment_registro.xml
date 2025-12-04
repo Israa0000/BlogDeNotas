@@ -64,7 +64,7 @@
             app:layout_constraintVertical_bias="0.742" />
 
         <TextView
-            android:id="@+id/VolverLogin"
+            android:id="@+id/textViewVolverALogin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Volver a Login"

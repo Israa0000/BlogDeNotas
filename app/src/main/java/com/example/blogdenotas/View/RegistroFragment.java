@@ -14,13 +14,16 @@ import android.widget.TextView;
 
 import com.example.blogdenotas.R;
 
+import org.w3c.dom.Text;
+
 
 public class RegistroFragment extends Fragment {
     EditText nombreUserRegistro;
     EditText contraseñaRegistro;
     EditText contraseña2Registro;
     Button btnSeguirRegistro;
-    TextView VolverLogin;
+    TextView textViewVolverALogin;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_registro,container,false);
@@ -28,12 +31,12 @@ public class RegistroFragment extends Fragment {
         contraseñaRegistro = view.findViewById(R.id.contraseñaRegistro);
         contraseña2Registro = view.findViewById(R.id.contraseña2Registro);
         btnSeguirRegistro = view.findViewById(R.id.btnSeguirRegistro);
-        TextView VolverLogin = view.findViewById(R.id.VolverLogin);
+        textViewVolverALogin = view.findViewById(R.id.textViewVolverALogin);
 
-        VolverLogin.setOnClickListener(v -> volverLogin());
-
+        textViewVolverALogin.setOnClickListener(v -> volverLogin());
         return inflater.inflate(R.layout.fragment_registro, container, false);
     }
+
 
     void volverLogin(){
         Fragment loginFragment = new LoginFragment();

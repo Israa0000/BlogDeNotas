@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".View.Registro2Fragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/apellidosRegistro"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/nombreRealRegistro"
+            android:layout_width="282dp"
+            android:layout_height="44dp"
+            android:ems="10"
+            android:hint="Nombre real"
+            android:inputType="text"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.503"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.215" />
+
+        <EditText
+            android:id="@+id/fechaNacimentoRegistro"
+            android:layout_width="281dp"
+            android:layout_height="46dp"
+            android:ems="10"
+            android:hint="Fecha de nacimiento dd/mm/aaaa"
+            android:inputType="text"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.507"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.522" />
+
+        <EditText
+            android:id="@+id/editTextText3"
+            android:layout_width="284dp"
+            android:layout_height="41dp"
+            android:ems="10"
+            android:hint="Apellidos"
+            android:inputType="text"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.511"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.366" />
+
+        <Button
+            android:id="@+id/btnTerminarRegistro"
+            android:layout_width="155dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="128dp"
+            android:text="Registrarse"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.687" />
+
+        <TextView
+            android:id="@+id/textViewVolverALogin2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Volver a login"
+            android:textColor="@color/purple_500"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.863" />
+
+        <TextView
+            android:id="@+id/textViewVolverRegistro2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Volver a registro"
+            android:textColor="@color/purple_500"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.793" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
