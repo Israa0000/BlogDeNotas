@@ -44,4 +44,11 @@ public class RegistroFragment extends Fragment {
         transaction.replace(R.id.main, loginFragment);
         transaction.commit();
     }
+
+    void seguirRegistro(){
+        Fragment registro2Fragment = new Registro2Fragment();
+        FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+        transaction.replace(R.id.main, registro2Fragment);
+        transaction.commit();
+    }
 }

@@ -3,6 +3,8 @@ package com.example.blogdenotas.View;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -33,9 +35,17 @@ public class Registro2Fragment extends Fragment {
         textViewVolverARegistro = view.findViewById(R.id.textViewVolverRegistro2);
         textViewVolverALogin = view.findViewById(R.id.textViewVolverALogin2);
 
-
+        btnTerminarRegistro.setOnClickListener(v -> irALogin());
 
         return view;
+    }
+
+    void irALogin(){
+        Fragment loginFragment = new LoginFragment();
+        //FragmentManager fragmentManager =
+        FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+        transaction.replace(R.id.main, loginFragment);
+        transaction.commit();
     }
 
     void filtrarFecha(){
@@ -45,8 +55,6 @@ public class Registro2Fragment extends Fragment {
             Toast.makeText(getContext(), "formato de fecha valido", Toast.LENGTH_SHORT).show();
         } else {
             Toast.makeText(getContext(), "formato de fecha invalido", Toast.LENGTH_SHORT).show();
-
         }
-
     }
 }
